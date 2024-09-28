@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./HeaderNav.css";
+import "../../global.css";
 import ImgCart from "../../images/icon-cart.svg";
 import ImgAvatar from "../../images/image-avatar.png";
 import ImgLogo from "../../images/logo.svg";

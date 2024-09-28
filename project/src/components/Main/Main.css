@@ -11,3 +11,31 @@
   --Black-/* (with 75% opacity for lightbox background) */
     : hsl(0, 0%, 0%);
 }
+
+.Main--content {
+  margin-top: 60px;
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: 1fr, 1fr;
+  grid-auto-columns: 50%;
+  grid-template-areas: "Carrusel--container Add--Cart";
+}
+
+.Carrusel--container {
+  grid-area: Carrusel--container;
+}
+
+.Add--Cart {
+  color: var(--Grayish-blue);
+  grid-area: Add--Cart;
+}
+
+/* .carousel-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slick-slide img {
+  width: 100%;
+  border-radius: 10px;
+} */
