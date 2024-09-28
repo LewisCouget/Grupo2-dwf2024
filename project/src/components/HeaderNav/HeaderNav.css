@@ -19,6 +19,7 @@
   justify-content: space-around;
   height: 10vh;
   border-bottom: 0.2px solid #e7e7e7;
+  padding: 2;
 }
 
 .Header--nav__title {
