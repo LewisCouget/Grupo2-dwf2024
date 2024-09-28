@@ -1,0 +1,22 @@
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7; /* Color de fondo global */
+  margin: 0;
+  padding: 0;
+}
+
+/* Si tienes un contenedor para centrar todo el contenido */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}

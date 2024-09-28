@@ -1,0 +1,41 @@
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+
+.Shopping--cart {
+  position: absolute; /* Asegura que el carrito esté flotando */
+  top: 70px; /* Ajusta según tu diseño */
+  right: 20px; /* Coloca el carrito a la derecha */
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100; /* Asegura que esté sobre otros elementos */
+}
+
+.Shopping--cart__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.Image--product {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.Checkout--button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.Checkout--button:hover {
+  background-color: #ff5252;
+}
