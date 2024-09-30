@@ -1,48 +1,42 @@
 import React from "react";
-/* import Slider from "react-slider"; */
+import Slider from "react-slick";
 import "./Main.css";
-/* import ImgSmall1 from "../../images/image-product-1-thumbnail.jpg";
-import ImgSmall2 from "../../images/image-product-2-thumbnail.jpg";
-import ImgSmall3 from "../../images/image-product-3-thumbnail.jpg";
-import ImgSmall4 from "../../images/image-product-4-thumbnail.jpg"; */
+import Carrucel from "./Carrusel";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const Main = () => {
+  /*  const [selectedImg, setSelectedImg] = useState(Carrucel[0].image); */
   const settings = {
-    doct: true,
+    dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    /*  afterChange: (index) => setSelectedImg(Carrucel[index].image), */
   };
 
   return (
     <main className="Main--content">
+      <div className="Selected--image">
+        {/* <img src={selectedImg} alt="Selected" /> */}
+      </div>
       <div className="Carrusel--container">
         <h1>Carrusel</h1>
-        {/* <Slider {...settings}>
-          <div>
-            <img src={ImgSmall1} alt="Producto 1" />
-          </div>
-          <div>
-            <img src={ImgSmall2} alt="Producto 2" />
-          </div>
-          <div>
-            <img src={ImgSmall3} alt="Producto 3" />
-          </div>
-          <div>
-            <img src={ImgSmall4} alt="Producto 4" />
-          </div>
-        </Slider> */}
+        <Slider {...settings}>
+          {Carrucel.map((item, index) => (
+            <div key={index}>
+              <img src={item.image} alt={item.alt} />
+            </div>
+          ))}
+        </Slider>
       </div>
 
       <div className="Add--Cart">
         <p>
-          Sneaker Company Fall Limited Edition Sneakers These low-profile
-          sneakers are your perfect casual wear companion. Featuring a durable
-          rubber outer sole, they’ll withstand everything the weather can offer.
-          $125.00 50% $250.00 0 Add to cart aksdbaksdaskdaskdasdkhasd
+          Collections Men Women About Contact Sneaker Company Fall Limited
+          Edition Sneakers These low-profile sneakers are your perfect casual
+          wear companion. Featuring a durable rubber outer sole, they’ll
+          withstand everything the weather can offer. $125.00 50% $250.00 0 Add
+          to cart
         </p>
       </div>
     </main>

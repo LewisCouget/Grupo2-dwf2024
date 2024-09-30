@@ -4,7 +4,7 @@ import "../../global.css";
 import ImgCart from "../../images/icon-cart.svg";
 import ImgAvatar from "../../images/image-avatar.png";
 import ImgLogo from "../../images/logo.svg";
-import { ShoppingCart } from "../ShoppingCart/ShoppingCart";
+import { ShoppingCart } from "./ShoppingCart/ShoppingCart";
 
 export const HeaderNav = () => {
   const [isCartVisible, setIsCartVisible] = useState(false);

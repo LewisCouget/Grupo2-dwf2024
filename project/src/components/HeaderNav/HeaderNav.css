@@ -8,8 +8,7 @@
   --Grayish-blue: hsl(220, 14%, 75%);
   --Light-grayish-blue: hsl(223, 64%, 98%);
   --White: hsl(0, 0%, 100%);
-  --Black-/* (with 75% opacity for lightbox background) */
-    : hsl(0, 0%, 0%);
+  --Black-: hsl(0, 0%, 0%);
 }
 
 .Header--nav {
@@ -19,11 +18,11 @@
   justify-content: space-around;
   height: 10vh;
   border-bottom: 0.2px solid #e7e7e7;
-  padding: 2;
 }
 
 .Header--nav__title {
   display: flex;
+  align-items: center;
 }
 
 .Image--logo {
@@ -64,6 +63,10 @@
   width: 100%;
 }
 
+.Header--img {
+  display: flex;
+}
+
 .Header--img__cart {
   padding-top: 15px;
   margin-right: 35px;
@@ -71,9 +74,19 @@
   height: 35px;
 }
 
+.Header--img__cart:hover {
+  filter: invert(0%) sepia(81%) saturate(7500%) hue-rotate(62deg)
+    brightness(87%) contrast(108%);
+}
+
 .Header--img__avatar {
   width: 50px;
-  height: 50px;
+  height: auto;
+  border-radius: 50%;
+}
+.Header--img__avatar:hover {
+  border: 2px solid var(--Orange);
+  transform: scale(1.1);
 }
 
 .Header--img {

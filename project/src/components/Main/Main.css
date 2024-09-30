@@ -8,8 +8,7 @@
   --Grayish-blue: hsl(220, 14%, 75%);
   --Light-grayish-blue: hsl(223, 64%, 98%);
   --White: hsl(0, 0%, 100%);
-  --Black-/* (with 75% opacity for lightbox background) */
-    : hsl(0, 0%, 0%);
+  --Black-: hsl(0, 0%, 0%);
 }
 
 .Main--content {
@@ -30,12 +29,28 @@
   grid-area: Add--Cart;
 }
 
-/* .carousel-container {
-  width: 80%;
+.carousel-container {
+  width: 50%;
   margin: 0 auto;
 }
 
 .slick-slide img {
-  width: 100%;
-  border-radius: 10px;
-} */
+  width: 50%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.Selected--image {
+  width: 50%;
+  max-height: 400px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.Selected--image img {
+  width: 50%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./ShoppingCart.css";
-import ImgProduct from "../../images/image-product-1-thumbnail.jpg";
+import ImgProduct from "../../../images/image-product-1-thumbnail.jpg";
 
 export const ShoppingCart = () => {
   return (
