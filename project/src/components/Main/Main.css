@@ -20,13 +20,13 @@
   grid-template-areas: "Carrusel--container Add--Cart";
 }
 
-.Carrusel--container {
-  grid-area: Carrusel--container;
+.Add--Cart {
+  grid-area: Add--Cart;
 }
 
-.Add--Cart {
-  color: var(--Grayish-blue);
-  grid-area: Add--Cart;
+/* Carrusel */
+.Carrusel--container {
+  grid-area: Carrusel--container;
 }
 
 .carousel-container {
@@ -54,3 +54,43 @@
   object-fit: cover;
   border-radius: 8px;
 }
+/* Carrusel */
+
+/* AddToCart */
+.Add--Cart {
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  grid-template-areas:
+    "Add--Cart__info"
+    "Add--Cart__cost"
+    "Add--Cart__items";
+}
+
+.Add--Cart__info h1 {
+  padding: 10px 0 25px 0;
+  grid-area: Add--Cart__info;
+}
+
+.Add--Cart__cost {
+  grid-area: Add--Cart__cost;
+}
+
+.Add--Cart__items {
+  grid-area: Add--Cart__items;
+}
+
+.Add--Cart__info p {
+  color: var(--Dark-grayish-blue);
+}
+
+.Add--Cart__info h4 {
+  color: var(--Dark-grayish-blue);
+}
+
+.Add--Cart__items {
+  display: flex;
+  width: 50px;
+}
+/* AddToCart */
