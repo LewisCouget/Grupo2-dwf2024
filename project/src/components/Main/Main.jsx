@@ -11,10 +11,19 @@ import ImgBig from "../../images/image-product-1.jpg";
 
 export const Main = () => {
   const [count, setCount] = useState(0);
+
   const handlePlus = () => setCount((prevCount) => prevCount + 1);
   const handleSubstract = () => {
     setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
   };
+
+  const handleAdd = () => {
+    if (count > 0) {
+      handleAddToCart("Fall Limited Edition Sneakers", count); // Producto y cantidad
+      setCount(0); // Reinicia el contador
+    }
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -56,8 +65,13 @@ export const Main = () => {
         </div>
 
         <div className="Add--Cart__cost">
-          <h2>$125.00</h2> 50% $250.00
+          <div className="cost">
+            <h2>$125.00</h2>
+            <p className="cost--line">$250.00</p>
+          </div>
+          <div className="percentage">50% </div>
         </div>
+
         <div className="Add--Cart__items">
           <span className="Add--Counter">
             <button className="Minus" onClick={handleSubstract}>
@@ -70,8 +84,9 @@ export const Main = () => {
               <img src={ImgPlus} className="ImgPlus" alt="Plus" />
             </button>
           </span>
+
           <button className="Add--Cart__buttonAdd" onClick={handleAddToCart}>
-            <img src={ImgCart} alt="" className="Add--ImgCart" />{" "}
+            <img src={ImgCart} alt="" className="Add--ImgCart" />
             <strong>Add to cart</strong>
           </button>
         </div>
