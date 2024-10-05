@@ -24,8 +24,8 @@ export const Main = ({ addToCart }) => {
         price: 125.0,
         quantity: count,
       };
-      addToCart(product); // Añadimos el producto al carrito
-      setCount(0); // Reiniciamos el contador
+      addToCart(product);
+      setCount(0);
     }
   };
 

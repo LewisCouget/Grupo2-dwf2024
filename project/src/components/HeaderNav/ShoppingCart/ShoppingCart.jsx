@@ -34,8 +34,7 @@ export const ShoppingCart = ({
       ) : (
         <p>Your cart is empty.</p>
       )}
-      {message && <p>{message}</p>}{" "}
-      {/* Mostrar mensajes de éxito o cancelación */}
+      {message && <p>{message}</p>}
     </div>
   );
 };
