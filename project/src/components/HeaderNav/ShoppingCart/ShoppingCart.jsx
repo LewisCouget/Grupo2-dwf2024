@@ -9,9 +9,14 @@ export const ShoppingCart = ({
   onCheckout,
   onRemoveItem,
 }) => {
+  const totalPrice = cartItem ? cartItem.price * cartItem.quantity : 0;
+
   return (
     <div className="Shopping--cart">
       <h2>Cart</h2>
+
+      {message && <p>{message}</p>}
+
       {cartItem ? (
         <>
           <div className="Shopping--cart__item">
@@ -20,7 +25,7 @@ export const ShoppingCart = ({
               <h3>{cartItem.name}</h3>
               <p>
                 ${cartItem.price} x {cartItem.quantity}{" "}
-                <strong>${cartItem.price * cartItem.quantity}</strong>
+                <strong>${totalPrice}</strong>
               </p>
             </div>
             <button className="Remove--item" onClick={onRemoveItem}>
@@ -32,9 +37,8 @@ export const ShoppingCart = ({
           </button>
         </>
       ) : (
-        <p>Your cart is empty.</p>
+        !message && <p>Your cart is empty.</p>
       )}
-      {message && <p>{message}</p>}
     </div>
   );
 };

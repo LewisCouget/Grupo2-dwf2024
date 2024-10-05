@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ImgMinus from "../../images/icon-minus.svg";
 import ImgPlus from "../../images/icon-plus.svg";
 import ImgCart from "../../images/icon-cart.svg";
-import ImgBig from "../../images/image-product-1.jpg";
+import ImgBig1 from "../../images/image-product-1.jpg";
 
 export const Main = ({ addToCart }) => {
   const [count, setCount] = useState(0);
@@ -39,11 +39,11 @@ export const Main = ({ addToCart }) => {
     <main className="Main--content">
       <div className="Selected--image"></div>
       <div className="Carrusel--container">
-        <img src={ImgBig} alt="" className="ImgBig" />
+        <img src={ImgBig1} alt="" className="ImgBig" />
         <Slider {...settings}>
           {Carrucel.map((item, index) => (
             <div key={index}>
-              <img src={item.image} alt={item.alt} />
+              <img src={item.smallImage} alt={item.alt} />
             </div>
           ))}
         </Slider>

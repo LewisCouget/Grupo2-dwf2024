@@ -23,7 +23,7 @@ const App = () => {
   };
 
   const handleRemoveItem = () => {
-    setCartItem(null);
+    setCartItem(null); // Limpiar el carrito
     setMessage("Purchase cancelled!");
   };
 
