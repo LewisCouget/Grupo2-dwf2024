@@ -90,6 +90,8 @@
 
 .Add--Cart__info p {
   color: var(--Dark-grayish-blue);
+  margin-bottom: 1rem;
+  line-height: 1.6rem;
 }
 
 .Add--Cart__info h4 {
