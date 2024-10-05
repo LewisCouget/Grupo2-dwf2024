@@ -1,16 +1,19 @@
+// src/components/Main/Main.jsx
+
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "./Main.css";
-import Carrucel from "./Carrusel";
+import Carrusel from "./Carrusel"; // Asegúrate de que la ruta sea correcta
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImgMinus from "../../images/icon-minus.svg";
 import ImgPlus from "../../images/icon-plus.svg";
 import ImgCart from "../../images/icon-cart.svg";
-import ImgBig1 from "../../images/image-product-1.jpg";
+import ImgBigPlaceholder from "../../images/image-product-1.jpg";
 
 export const Main = ({ addToCart }) => {
   const [count, setCount] = useState(0);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const handlePlus = () => setCount((prevCount) => prevCount + 1);
   const handleSubstract = () => {
@@ -33,20 +36,42 @@ export const Main = ({ addToCart }) => {
     dots: true,
     infinite: true,
     slidesToShow: 4,
+    slidesToScroll: 1,
+    focusOnSelect: true,
   };
 
   return (
     <main className="Main--content">
-      <div className="Selected--image"></div>
-      <div className="Carrusel--container">
-        <img src={ImgBig1} alt="" className="ImgBig" />
-        <Slider {...settings}>
-          {Carrucel.map((item, index) => (
-            <div key={index}>
-              <img src={item.smallImage} alt={item.alt} />
-            </div>
-          ))}
-        </Slider>
+      <div className="Main--selected">
+        <div className="Selected--image">
+          <img
+            src={Carrusel[selectedImageIndex].bigImage}
+            alt={Carrusel[selectedImageIndex].alt}
+            className="ImgBig"
+          />
+        </div>
+        <div className="Carrusel--container">
+          <Slider {...settings}>
+            {Carrusel.map((item, index) => (
+              <div key={index}>
+                <img
+                  src={item.smallImage}
+                  alt={item.alt}
+                  className="ImgSmall"
+                  onClick={() => setSelectedImageIndex(index)}
+                  style={{
+                    border:
+                      selectedImageIndex === index
+                        ? "2px solid hsl(26, 100%, 55%)"
+                        : "2px solid transparent",
+                    borderRadius: "8px",
+                    cursor: "pointer",
+                  }}
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
 
       <div className="Add--Cart">
@@ -65,7 +90,7 @@ export const Main = ({ addToCart }) => {
             <h2>$125.00</h2>
             <p className="cost--line">$250.00</p>
           </div>
-          <div className="percentage">50% </div>
+          <div className="percentage">50%</div>
         </div>
 
         <div className="Add--Cart__items">

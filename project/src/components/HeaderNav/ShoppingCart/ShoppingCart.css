@@ -1,5 +1,3 @@
-@import url(https://fonts.google.com/specimen/Kumbh+Sans);
-
 :root {
   --Orange: hsl(26, 100%, 55%);
   --Pale-orange: hsl(25, 100%, 94%);
@@ -12,16 +10,18 @@
 }
 
 .Shopping--cart {
-  position: absolute; /* Asegura que el carrito esté flotando */
-  top: 70px; /* Ajusta según tu diseño */
-  right: 20px; /* Coloca el carrito a la derecha */
+  position: absolute;
+  top: 70px;
+  right: 20px;
   width: 300px;
   background-color: white;
   border: 1px solid #ddd;
   padding: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 100; /* Asegura que esté sobre otros elementos */
+  z-index: 100;
+  text-align: center;
 }
+
 .Shopping--cart h2 {
   font-size: 16px;
   padding-bottom: 10px;
@@ -32,8 +32,15 @@
 .Shopping--cart__item {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 15px;
   padding: 0;
+}
+
+.Shopping--cart__details {
+  text-align: left;
+  flex-grow: 1;
+  margin-left: 10px;
 }
 
 .Image--product {
@@ -43,27 +50,46 @@
   border-radius: 5px;
 }
 
+.Remove--item {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+}
+
+.Remove--item img {
+  width: 20px;
+  height: 20px;
+}
+
 .Checkout--button {
   width: 100%;
   padding: 10px;
-  background-color: #ff6b6b;
-  color: white;
+  background-color: var(--Orange);
+  color: var(--Very-dark-blue);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  margin-top: 10px;
 }
 
 .Checkout--button:hover {
   background-color: var(--Pale-orange);
 }
 
-.Remove--item {
-  border: none;
-  background-color: none;
+p {
+  text-align: center;
 }
 
-.Checkout--button {
-  color: var(--Very-dark-blue);
-  background-color: var(--Orange);
+h2 {
+  text-align: start;
+}
+
+h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+strong {
+  font-weight: bold;
 }

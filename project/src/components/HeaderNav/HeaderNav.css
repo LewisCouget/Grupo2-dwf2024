@@ -81,7 +81,7 @@
 
 .Header--img__avatar {
   width: 50px;
-  height: auto;
+  height: 50px;
   border-radius: 50%;
 }
 .Header--img__avatar:hover {
@@ -92,4 +92,10 @@
 .Header--img {
   display: flex;
   justify-content: space-between;
+}
+
+.cart-count {
+  background-color: var(--Orange);
+  border-radius: 50%;
+  color: var(--Light-grayish-blue);
 }

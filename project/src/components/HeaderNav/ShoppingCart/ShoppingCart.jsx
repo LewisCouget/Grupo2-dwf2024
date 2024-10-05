@@ -15,7 +15,17 @@ export const ShoppingCart = ({
     <div className="Shopping--cart">
       <h2>Cart</h2>
 
-      {message && <p>{message}</p>}
+      {message && (
+        <p
+          style={{
+            textAlign: "center",
+            color: message === "Purchase successful!" ? "green" : "red",
+            fontWeight: "bold",
+          }}
+        >
+          {message}
+        </p>
+      )}
 
       {cartItem ? (
         <>
@@ -25,7 +35,7 @@ export const ShoppingCart = ({
               <h3>{cartItem.name}</h3>
               <p>
                 ${cartItem.price} x {cartItem.quantity}{" "}
-                <strong>${totalPrice}</strong>
+                <strong>${totalPrice.toFixed(2)}</strong>
               </p>
             </div>
             <button className="Remove--item" onClick={onRemoveItem}>
