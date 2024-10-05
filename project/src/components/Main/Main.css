@@ -14,6 +14,7 @@
 .Main--content {
   margin-top: 60px;
   display: grid;
+  align-items: center;
   column-gap: 50px;
   align-items: center;
   grid-template-columns: 1fr, 1fr;
@@ -207,8 +208,7 @@
   padding-right: 10px;
 }
 
-.Add--Cart__info p{
-  margin-bottom: 1rem;
+.Add--Cart__info {
   margin-right: 300px;
 }
 /* Checkout */
