@@ -83,16 +83,15 @@ export const Main = ({ addToCart }) => {
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-        </div>
-
-        <div className="Add--Cart__cost">
-          <div className="cost">
-            <h2>$125.00</h2>
-            <p className="cost--line">$250.00</p>
+          
+          <div className="Add--Cart__cost">
+            <div className="cost">
+              <h2>$125.00</h2>
+              <p className="cost--line">$250.00</p>
+            </div>
+            <div className="percentage">50%</div>
           </div>
-          <div className="percentage">50%</div>
         </div>
-
         <div className="Add--Cart__items">
           <span className="Add--Counter">
             <button className="Minus" onClick={handleSubstract}>
