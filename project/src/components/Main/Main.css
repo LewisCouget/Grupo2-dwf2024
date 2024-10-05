@@ -216,3 +216,10 @@
 /* Checkout */
 
 /* AddToCart */
+
+/* @media (min-whidth: 550px) {
+  .Main--content {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr;
+  }
+} */
