@@ -6,6 +6,77 @@ import ImgAvatar from "../../images/image-avatar.png";
 import ImgLogo from "../../images/logo.svg";
 import { ShoppingCart } from "./ShoppingCart/ShoppingCart";
 
+export const HeaderNav = ({ cartItem, message, onCheckout, onRemoveItem }) => {
+  const [isCartVisible, setIsCartVisible] = useState(false); // Estado para controlar la visibilidad del carrito
+
+  // Manejar la visibilidad del carrito
+  const toggleCartVisibility = () => {
+    setIsCartVisible((prevState) => !prevState);
+  };
+
+  return (
+    <header className="Header--nav">
+      <div className="Header--nav__title">
+        <img className="Image--logo" src={ImgLogo} alt="Logo" />
+        <nav className="Main--nav">
+          <ul>
+            <li>
+              <a href="#">Collections</a>
+            </li>
+            <li>
+              <a href="#">Men</a>
+            </li>
+            <li>
+              <a href="#">Women</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div className="Header--img">
+        <img
+          className="Header--img__cart"
+          src={ImgCart}
+          alt="Cart"
+          onClick={toggleCartVisibility} // Mostrar/ocultar carrito al hacer clic
+          style={{ cursor: "pointer" }}
+        />
+        <img
+          className="Header--img__avatar"
+          src={ImgAvatar}
+          alt="Avatar"
+          onClick={toggleCartVisibility} // También mostrar/ocultar carrito al hacer clic en el avatar
+          style={{ cursor: "pointer" }}
+        />
+      </div>
+
+      {/* Solo mostrar ShoppingCart si isCartVisible es true */}
+      {isCartVisible && (
+        <ShoppingCart
+          cartItem={cartItem}
+          message={message}
+          onCheckout={onCheckout}
+          onRemoveItem={onRemoveItem}
+        />
+      )}
+    </header>
+  );
+};
+
+/* import React, { useState } from "react";
+import "./HeaderNav.css";
+import "../../global.css";
+import ImgCart from "../../images/icon-cart.svg";
+import ImgAvatar from "../../images/image-avatar.png";
+import ImgLogo from "../../images/logo.svg";
+import { ShoppingCart } from "./ShoppingCart/ShoppingCart";
+
 export const HeaderNav = () => {
   const [isCartVisible, setIsCartVisible] = useState(false);
 
@@ -51,3 +122,4 @@ export const HeaderNav = () => {
     </header>
   );
 };
+ */

@@ -9,7 +9,7 @@ import ImgPlus from "../../images/icon-plus.svg";
 import ImgCart from "../../images/icon-cart.svg";
 import ImgBig from "../../images/image-product-1.jpg";
 
-export const Main = () => {
+export const Main = ({ addToCart }) => {
   const [count, setCount] = useState(0);
 
   const handlePlus = () => setCount((prevCount) => prevCount + 1);
@@ -17,10 +17,15 @@ export const Main = () => {
     setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
   };
 
-  const handleAdd = () => {
+  const handleAddToCart = () => {
     if (count > 0) {
-      handleAddToCart("Fall Limited Edition Sneakers", count); // Producto y cantidad
-      setCount(0); // Reinicia el contador
+      const product = {
+        name: "Fall Limited Edition Sneakers",
+        price: 125.0,
+        quantity: count,
+      };
+      addToCart(product); // Añadimos el producto al carrito
+      setCount(0); // Reiniciamos el contador
     }
   };
 
@@ -28,15 +33,6 @@ export const Main = () => {
     dots: true,
     infinite: true,
     slidesToShow: 4,
-  };
-
-  const handleInputChange = (e) => {
-    setCount(e.target.value);
-  };
-
-  const handleAddToCart = (e) => {
-    props.setCartCount(count);
-    setCount(0);
   };
 
   return (
@@ -77,9 +73,7 @@ export const Main = () => {
             <button className="Minus" onClick={handleSubstract}>
               <img src={ImgMinus} className="ImgMinus" alt="Minus" />
             </button>
-            <span className="counter" onChange={handleInputChange}>
-              {count}
-            </span>
+            <span className="counter">{count}</span>
             <button className="Plus" onClick={handlePlus}>
               <img src={ImgPlus} className="ImgPlus" alt="Plus" />
             </button>
