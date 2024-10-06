@@ -210,7 +210,9 @@
 }
 
 .Add--Cart__info {
-  margin-right: 100px;
+  max-width: 450px;
+  min-width: 400px;
+  margin-right: 200px;
 }
 /* Checkout */
 
