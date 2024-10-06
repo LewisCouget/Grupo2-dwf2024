@@ -2,7 +2,7 @@
 
 - Carolina Segal
 - Lewis Couget
-- Juan Pablo Duarte Gálvez
+- Juan Pablo Duarte
 - Santiago Ripa
 
 ### link Vercel
