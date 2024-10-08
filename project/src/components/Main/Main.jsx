@@ -1,15 +1,12 @@
-// src/components/Main/Main.jsx
-
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "./Main.css";
-import Carrusel from "./Carrusel"; // Asegúrate de que la ruta sea correcta
+import Carrusel from "./Carrusel";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ImgMinus from "../../images/icon-minus.svg";
 import ImgPlus from "../../images/icon-plus.svg";
 import ImgCart from "../../images/icon-cart.svg";
-import ImgBigPlaceholder from "../../images/image-product-1.jpg";
 
 export const Main = ({ addToCart }) => {
   const [count, setCount] = useState(0);
@@ -83,7 +80,7 @@ export const Main = ({ addToCart }) => {
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-          
+
           <div className="Add--Cart__cost">
             <div className="cost">
               <h2>$125.00</h2>

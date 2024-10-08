@@ -61,6 +61,10 @@
   max-height: 300px;
   border-radius: 8px;
 }
+
+.ImgSmall:hover {
+  background-color: var(--Orange);
+}
 /* Carrusel */
 
 /* AddToCart */
